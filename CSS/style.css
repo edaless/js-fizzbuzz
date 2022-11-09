@@ -12,6 +12,46 @@ font-family: 'Roboto', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
+main{
+    min-height: 100vh;
+    min-width: 100%;
+    /* padding: 4vw; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 
+    background-color: blue;
+}
+:root{
+    /* var(--w-main) */
+    --w-main: 80vw;
+}
+.container{
+    /* min-height: 80vh; */
+    /* width: var(--w-main); */
+    height: 80vh;
+    margin-top: 5vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* justify-content: center; */
+
+    /* background-color: rgb(255, 0, 230); */
+}
+
+.tessera{    
+    /* var(--w-tessera) */
+    --w-tessera: 100px;
+    /* --w-tessera: calc((var(--w-main) / 10) - 6px); */
+    height: var(--w-tessera);
+    width: var(--w-tessera);
+    margin: 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    background-color: rgb(255, 0, 0);
+}
 
 
