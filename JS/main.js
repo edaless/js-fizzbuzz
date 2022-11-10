@@ -23,9 +23,14 @@
 
 
 const primoNumero = 1;
-const ultimoNumero = 100;
+const ultimoNumero = 255 * 6;
 let outPut;
 
+
+// variabili colori
+let r;
+let g;
+let b;
 
 const contenitore = document.querySelector(".container");
 
@@ -50,13 +55,61 @@ for(let i = primoNumero; i < (ultimoNumero + 1); i++){
     console.log(outPut);
 
     // creo div nel document
-    const element = document.createElement("div");
+    const div = document.createElement("div");
     // che contiene l'output
-    element.append(outPut);
+    div.append(outPut);
     // aggiungo la classe tessera
-    element.classList.add("tessera");
+    div.classList.add("tessera");
+    
+
+    // cambio colori!!!
+
+    // aumenta g
+    if ( i <= 255 ){
+        r = 255;
+        g = i;
+        b = 0;
+    }
+    // diminuisce r
+    if ( i > 255 && i <= (255 * 2) ){
+        r = (255 * 2) - i;
+        g = 255;
+        b = 0;
+    }
+    // aumenta b
+    if ( i > (255 * 2)  && i <= (255 * 3) ){
+        r = 0;
+        g = 255;
+        b = i - (255 * 2);
+    }
+    // diminuisce g
+    if ( i > (255 * 3)  && i <= (255 * 4) ){
+        r = 0;
+        g = (255 * 4) - i;
+        b = 255;
+    }
+    // aumenta r
+    if ( i > (255 * 4)  && i <= (255 * 5) ){
+        r = i - (255 * 4) ;
+        g = 0;
+        b = 255;
+    }
+    // diminuisce b
+    if ( i > (255 * 5)  && i <= (255 * 6) ){
+        r = 255;
+        g = 0;
+        b = (255 * 6) - i;
+    }
+
+    
+    console.log("r =", r," g =", g," b =", b);
+    
+    // passo colore al div
+    div.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")";
+    
+    
     // aggiungo questo div al container
-    contenitore.append(element);
+    contenitore.append(div);
 
 }
 
