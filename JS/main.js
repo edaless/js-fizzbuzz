@@ -23,10 +23,13 @@
 
 
 const primoNumero = 1;
-const ultimoNumero = 100;
+// const ultimoNumero = 10;
+// const ultimoNumero = 100;
 // const ultimoNumero = 255 * 6;
-// const ultimoNumero = prompt("quante tessere vuoi? Consiglio " + 255 * 6 + " per avere tutti i colori rgb");
+const ultimoNumero = prompt("quante tessere vuoi? Consiglio " + 255 * 6 );
 let outPut;
+
+
 
 
 // variabili colori
@@ -104,7 +107,7 @@ for(let i = primoNumero; i <= ultimoNumero; i++){
     }
 
     
-    console.log("r =", r," g =", g," b =", b);
+    // console.log("r =", r," g =", g," b =", b);
     
     // passo colore al div
     div.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")";
@@ -121,7 +124,6 @@ for(let i = primoNumero; i <= ultimoNumero; i++){
     contenitore.append(div);
 
 }
-
 
 
 
