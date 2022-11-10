@@ -23,7 +23,9 @@
 
 
 const primoNumero = 1;
-const ultimoNumero = 255 * 6;
+const ultimoNumero = 100;
+// const ultimoNumero = 255 * 6;
+// const ultimoNumero = prompt("quante tessere vuoi? Consiglio " + 255 * 6 + " per avere tutti i colori rgb");
 let outPut;
 
 
@@ -36,7 +38,7 @@ const contenitore = document.querySelector(".container");
 
 
 // ciclo che aumenta l'index e aggiunge un'eventuale div
-for(let i = primoNumero; i < (ultimoNumero + 1); i++){ 
+for(let i = primoNumero; i <= ultimoNumero; i++){ 
 
     if(((i % 3) === 0) && ((i % 5) === 0)){
         outPut = "FizzBuzz";
@@ -56,14 +58,14 @@ for(let i = primoNumero; i < (ultimoNumero + 1); i++){
 
     // creo div nel document
     const div = document.createElement("div");
-    // che contiene l'output
+    // gli inserisco l'output
     div.append(outPut);
-    // aggiungo la classe tessera
+    // gli aggiungo la classe tessera
     div.classList.add("tessera");
+
     
 
     // cambio colori!!!
-
     // aumenta g
     if ( i <= 255 ){
         r = 255;
@@ -108,6 +110,13 @@ for(let i = primoNumero; i < (ultimoNumero + 1); i++){
     div.style.backgroundColor = "rgb(" + r + "," + g + "," + b +")";
     
     
+    // eventualmente potrei generare 
+    // una classe specifica per ogni tessera
+    // div.classList.add("tess-" + i);
+    // però il colore non è sovrascrivibile
+
+
+
     // aggiungo questo div al container
     contenitore.append(div);
 

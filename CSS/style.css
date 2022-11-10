@@ -15,10 +15,11 @@ font-family: 'Roboto', sans-serif;
 main{
     min-height: 100vh;
     min-width: 100%;
-    /* padding: 4vw; */
+    padding: 0 40px;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     /* background-color: blue; */
 }
@@ -27,13 +28,12 @@ main{
     --w-main: 80vw;
 }
 .container{
-    /* min-height: 80vh; */
-    /* width: var(--w-main); */
-    height: 95vh;
-    margin-top: 5vh;
-    width: calc(100% - 80px);
+    height: calc(100vh - 50px);
     overflow-y: scroll;
+    margin-top: 10px;
+    
     display: flex;
+    /* align-items: center; */
     flex-wrap: wrap;
 
     /* justify-content: center; */
@@ -55,10 +55,20 @@ main{
     /* background-color: rgb(255, 0, 0); */
 }
 
-.tess-12{
-    background-color: chartreuse;
-}
 
-.tess-2{
-    background-color: rgb(0, 17, 255);
+
+/* .tess-12{
+    height: 500px;
+} */
+/* 
+se vuoi una classe specifica per ogni tessera 
+devi scommentare la riga "div.classList.add("tess-" + i);"
+(si trova verso la fine del js)
+*/
+
+
+button{
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
 }
